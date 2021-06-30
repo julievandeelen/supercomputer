@@ -157,12 +157,12 @@ if __name__ == "__main__":
     convergence_metrics =[EpsilonProgress()]
 
     with MultiprocessingEvaluator(vensimModel) as evaluator:
-        results, convergence = evaluator.optimize(nfe=800000, searchover='levers', convergence=convergence_metrics, #10
-                                      epsilons=[0.05,] * len(vensimModel.outcomes) , Scenario=ref_scen) #0.001 #0.1
+        results, convergence = evaluator.optimize(nfe=1000000, searchover='levers', convergence=convergence_metrics, #10
+                                      epsilons=[0.02,] * len(vensimModel.outcomes) , Scenario=ref_scen) #0.001 #0.1
 
 
-    results.to_excel('./Data/results_convergence7_supercomp3.xlsx')
-    convergence.to_excel('./Data/conv_convergence7_supercomp3.xlsx')
+    results.to_excel('./Data/results_convergence7_supercomp5.xlsx')
+    convergence.to_excel('./Data/conv_convergence7_supercomp5.xlsx')
 
 
 
